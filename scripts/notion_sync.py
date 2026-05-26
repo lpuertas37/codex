@@ -10,6 +10,16 @@ PAPERS_PROPS=['Título','Autores','Año','Revista / Fuente','DOI','URL','Abstrac
 MALLA_PROPS=['ID de tema','Línea editorial','Producto relacionado','Título base','Keyword principal','Keywords secundarias','Intención del contenido','Formato principal','Estado','Prioridad','Papers asignados','Paper principal','Resumen del enfoque','Fecha sugerida de publicación','URL del borrador','URL publicada','Notas']
 
 
+
+
+def map_estado_malla(estado:str)->str:
+    e=(estado or '').strip().lower()
+    if e in ('pendiente','en investigación','en investigacion','con papers asignados','borrador generado','en revisión','en revision','publicado','pausado'):
+        return e.replace('investigacion','investigación').replace('revision','revisión').title()
+    if e=='publicado_o_borrador':
+        return 'Publicado'
+    return 'Pendiente'
+
 def normalize_title(title:str)->str:
     t=(title or '').lower(); t=re.sub(r'^\s*\[mock\]\s*','',t); t=re.sub(r'[^\w\s]',' ',t)
     return ' '.join(t.split())
@@ -90,7 +100,23 @@ def main():
     malla=load_editorial_malla()
     for line,ld in malla.get('lineas_editoriales',{}).items():
         for t in ld.get('temas',[]):
-            props=sanitize_props({'ID de tema':{'title':[{'text':{'content':t['id']}}]},'Línea editorial':{'select':{'name':'Marca personal Luis' if 'marca_personal' in line else 'Líderes / Skillia'}},'Producto relacionado':{'select':{'name':t.get('producto_relacionado','Otro')}},'Título base':{'rich_text':[{'text':{'content':t.get('titulo_base','')}}]}},m_allowed,rep['missing'])
+            keywords=t.get('keywords',[])
+            props=sanitize_props({
+                'ID de tema':{'title':[{'text':{'content':t['id']}}]},
+                'Línea editorial':{'select':{'name':'Marca personal Luis' if 'marca_personal' in line else 'Líderes / Skillia'}},
+                'Producto relacionado':{'select':{'name':t.get('producto_relacionado','Otro')}},
+                'Título base':{'rich_text':[{'text':{'content':t.get('titulo_base','')}}]},
+                'Keyword principal':{'rich_text':[{'text':{'content':(keywords[0] if keywords else '')}}]},
+                'Keywords secundarias':{'rich_text':[{'text':{'content':', '.join(keywords[1:])}}]},
+                'Intención del contenido':{'rich_text':[{'text':{'content':t.get('intencion','')}}]},
+                'Formato principal':{'select':{'name':(ld.get('formatos') or ['Artículo SEO'])[0].replace('Nota técnica breve','Nota técnica')}},
+                'Estado':{'select':{'name':map_estado_malla(t.get('estado','pendiente'))}},
+                'Prioridad':{'number':int(t.get('prioridad',3))},
+                'Papers asignados':{'rich_text':[{'text':{'content':''}}]},
+                'Paper principal':{'rich_text':[{'text':{'content':''}}]},
+                'Resumen del enfoque':{'rich_text':[{'text':{'content':t.get('titulo_base','')}}]},
+                'Notas':{'rich_text':[{'text':{'content':''}}]}
+            },m_allowed,rep['missing'])
             if a.dry_run: rep['skipped']+=1; continue
             r=upsert(token,m_db,props,'ID de tema',t['id']); rep['malla_created']+= (r=='created'); rep['malla_updated']+=(r=='updated'); rep['skipped']+=(r=='skipped')
     cls_path=Path('outputs/papers/weekly_paper_classification.json')
