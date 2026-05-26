@@ -1,0 +1,31 @@
+name: Weekly Papers Pipeline
+
+on:
+  schedule:
+    - cron: '0 13 * * 5'
+  workflow_dispatch:
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - run: pytest -q
+      - name: Run weekly pipeline
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_PAPERS_DATABASE_ID: ${{ secrets.NOTION_PAPERS_DATABASE_ID }}
+          NOTION_MALLA_DATABASE_ID: ${{ secrets.NOTION_MALLA_DATABASE_ID }}
+        run: python scripts/run_weekly_pipeline.py --days 30
+      - name: Upload outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-pipeline-outputs
+          path: |
+            data/*.json
+            outputs/**
