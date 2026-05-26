@@ -1,0 +1,118 @@
+lineas_editoriales:
+  marca_personal_luis:
+    descripcion: "Contenido de autoridad para posicionar a Luis Puertas como experto en psicometría, psicología organizacional, people analytics, evaluación del talento, bienestar laboral e inteligencia artificial aplicada a RRHH."
+    tono: "Reflexivo, experto, humano, con base académica pero cercano."
+    formatos:
+      - Post LinkedIn
+      - Artículo de opinión
+      - Newsletter
+      - Nota técnica breve
+    temas:
+      - id: MP-001
+        producto_relacionado: "Psicometría aplicada"
+        titulo_base: "Cómo usar evidencia de validez para tomar mejores decisiones de talento"
+        keywords:
+          - validez psicométrica
+          - evaluación del talento
+          - evidencia de validez
+          - psicometría organizacional
+        intencion: "Educar y posicionar autoridad técnica"
+        estado: "pendiente"
+        prioridad: 1
+
+  lideres_skillia:
+    descripcion: "Contenido técnico-comercial para posicionar servicios y productos de Skillia / Líderes en clima laboral, cultura organizacional, riesgos psicosociales, evaluación 360, desempeño y people analytics."
+    tono: "Empresarial, claro, útil para SEO, práctico y orientado a toma de decisiones."
+    formatos:
+      - Artículo SEO
+      - Infografía
+      - Resumen ejecutivo
+      - Post LinkedIn corporativo
+    temas:
+      - id: LS-001
+        producto_relacionado: "Clima laboral"
+        titulo_base: "Qué es el clima laboral y por qué influye en el desempeño de los equipos"
+        keywords:
+          - clima laboral
+          - desempeño laboral
+          - encuesta de clima laboral
+          - gestión del talento humano
+        intencion: "Posicionamiento SEO y educación comercial"
+        estado: "publicado_o_borrador"
+        prioridad: 1
+
+      - id: LS-002
+        producto_relacionado: "Cultura organizacional"
+        titulo_base: "Cultura organizacional: qué es y cómo impacta en la forma de trabajar"
+        keywords:
+          - cultura organizacional
+          - tipos de cultura organizacional
+          - cambio cultural
+          - valores organizacionales
+        intencion: "Posicionamiento SEO y educación comercial"
+        estado: "publicado_o_borrador"
+        prioridad: 1
+
+      - id: LS-003
+        producto_relacionado: "Riesgos psicosociales"
+        titulo_base: "Riesgos psicosociales laborales: qué son y por qué ayudan a anticipar problemas en la empresa"
+        keywords:
+          - riesgos psicosociales laborales
+          - estrés laboral
+          - salud mental en el trabajo
+          - salud general
+          - prevención de riesgos laborales
+        intencion: "Educación comercial y prevención organizacional"
+        estado: "publicado_o_borrador"
+        prioridad: 1
+
+      - id: LS-004
+        producto_relacionado: "Analítica y mejora continua"
+        titulo_base: "Cómo convertir los resultados de una encuesta organizacional en planes de acción"
+        keywords:
+          - encuesta organizacional
+          - planes de acción
+          - clima laboral
+          - cultura organizacional
+          - riesgos psicosociales
+        intencion: "Mostrar capacidad consultiva y analítica"
+        estado: "publicado_o_borrador"
+        prioridad: 1
+
+      - id: LS-005
+        producto_relacionado: "Clima laboral"
+        titulo_base: "Factores que afectan el clima laboral: liderazgo, comunicación y bienestar"
+        keywords:
+          - factores de clima laboral
+          - liderazgo
+          - comunicación interna
+          - bienestar laboral
+        intencion: "Profundización SEO"
+        estado: "pendiente"
+        prioridad: 2
+
+      - id: LS-006
+        producto_relacionado: "Cultura organizacional"
+        titulo_base: "Tipos de cultura organizacional: cómo identificar el estilo dominante en una empresa"
+        keywords:
+          - tipos de cultura organizacional
+          - cultura de clan
+          - cultura jerárquica
+          - cultura de mercado
+          - cultura adhocrática
+        intencion: "Profundización SEO"
+        estado: "pendiente"
+        prioridad: 2
+
+      - id: LS-007
+        producto_relacionado: "Riesgos psicosociales"
+        titulo_base: "Estrés laboral, carga mental y desgaste: señales que una organización no debería ignorar"
+        keywords:
+          - estrés laboral
+          - carga mental
+          - desgaste laboral
+          - burnout
+          - salud mental laboral
+        intencion: "Profundización SEO y prevención"
+        estado: "pendiente"
+        prioridad: 2
