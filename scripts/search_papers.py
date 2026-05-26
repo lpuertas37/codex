@@ -55,7 +55,7 @@ def dedup(rows):
 
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--days',type=int,default=30); ap.add_argument('--mock',action='store_true'); ap.add_argument('--dry-run',action='store_true'); a=ap.parse_args()
-    mode = "mock" if a.mock else "real"
+mode = "mock" if a.mock else "real"
 log_line("logs/search_papers.log", f"mode={mode} dry_run={a.dry_run}")
     Path('data').mkdir(exist_ok=True)
     if a.mock:
