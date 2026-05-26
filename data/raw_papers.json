@@ -1,0 +1,123 @@
+[
+  {
+    "title": "[MOCK] Workplace Climate and Team Performance",
+    "authors": [
+      "Ana Pérez",
+      "John Smith"
+    ],
+    "year": 2025,
+    "source": "Journal of Organizational Behavior",
+    "doi": "10.0000/mock-clima-001",
+    "url": "https://example.org/mock-clima",
+    "abstract": "Study on clima laboral, leadership and team outcomes.",
+    "keywords": [
+      "clima laboral",
+      "desempeño laboral",
+      "liderazgo"
+    ],
+    "origin": "Mock",
+    "doi_normalizado": "10.0000/mock-clima-001",
+    "doi_url": "https://doi.org/10.0000/mock-clima-001",
+    "url_fuente": "https://example.org/mock-clima",
+    "openalex_url": "",
+    "semantic_scholar_url": "",
+    "language": "en",
+    "publication_type": "mock"
+  },
+  {
+    "title": "[MOCK] Organizational Culture Types in Hybrid Work",
+    "authors": [
+      "Laura Gómez"
+    ],
+    "year": 2024,
+    "source": "Management Review",
+    "doi": "10.0000/mock-cultura-001",
+    "url": "https://example.org/mock-cultura",
+    "abstract": "Analysis of cultura organizacional and cultural adaptation.",
+    "keywords": [
+      "cultura organizacional",
+      "cambio cultural",
+      "valores organizacionales"
+    ],
+    "origin": "Mock",
+    "doi_normalizado": "10.0000/mock-cultura-001",
+    "doi_url": "https://doi.org/10.0000/mock-cultura-001",
+    "url_fuente": "https://example.org/mock-cultura",
+    "openalex_url": "",
+    "semantic_scholar_url": "",
+    "language": "en",
+    "publication_type": "mock"
+  },
+  {
+    "title": "[MOCK] Psychosocial Risk Signals and Burnout",
+    "authors": [
+      "Carlos Ruiz"
+    ],
+    "year": 2026,
+    "source": "Occupational Health Letters",
+    "doi": "10.0000/mock-riesgos-001",
+    "url": "https://example.org/mock-riesgos",
+    "abstract": "Burnout, estrés laboral and mental load in operational teams.",
+    "keywords": [
+      "riesgos psicosociales laborales",
+      "estrés laboral",
+      "burnout"
+    ],
+    "origin": "Mock",
+    "doi_normalizado": "10.0000/mock-riesgos-001",
+    "doi_url": "https://doi.org/10.0000/mock-riesgos-001",
+    "url_fuente": "https://example.org/mock-riesgos",
+    "openalex_url": "",
+    "semantic_scholar_url": "",
+    "language": "en",
+    "publication_type": "mock"
+  },
+  {
+    "title": "[MOCK] People Analytics for Retention Forecasting",
+    "authors": [
+      "Elena Torres"
+    ],
+    "year": 2025,
+    "source": "HR Analytics Quarterly",
+    "doi": "10.0000/mock-pa-001",
+    "url": "https://example.org/mock-pa",
+    "abstract": "People analytics models for turnover prediction.",
+    "keywords": [
+      "people analytics",
+      "gestión del talento humano",
+      "analítica"
+    ],
+    "origin": "Mock",
+    "doi_normalizado": "10.0000/mock-pa-001",
+    "doi_url": "https://doi.org/10.0000/mock-pa-001",
+    "url_fuente": "https://example.org/mock-pa",
+    "openalex_url": "",
+    "semantic_scholar_url": "",
+    "language": "unknown",
+    "publication_type": "mock"
+  },
+  {
+    "title": "[MOCK] Validity Evidence in Talent Assessment",
+    "authors": [
+      "Luis Vega"
+    ],
+    "year": 2023,
+    "source": "Psychometrics Today",
+    "doi": "10.0000/mock-psicometria-001",
+    "url": "https://example.org/mock-psicometria",
+    "abstract": "Evidence of validity in psychometric tools for talent decisions.",
+    "keywords": [
+      "validez psicométrica",
+      "evaluación del talento",
+      "psicometría organizacional"
+    ],
+    "origin": "Mock",
+    "doi_normalizado": "10.0000/mock-psicometria-001",
+    "doi_url": "https://doi.org/10.0000/mock-psicometria-001",
+    "url_fuente": "https://example.org/mock-psicometria",
+    "openalex_url": "",
+    "semantic_scholar_url": "",
+    "language": "unknown",
+    "publication_type": "mock"
+  }
+]
