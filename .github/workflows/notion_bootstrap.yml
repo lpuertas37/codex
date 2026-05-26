@@ -1,0 +1,19 @@
+name: Notion Bootstrap (manual)
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-databases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: pip install -r requirements.txt
+      - name: Create Notion databases
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_PARENT_PAGE_ID: ${{ secrets.NOTION_PARENT_PAGE_ID }}
+        run: python scripts/create_notion_databases.py
