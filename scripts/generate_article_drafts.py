@@ -39,7 +39,8 @@ def main() -> None:
     parser.add_argument('--mock', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
-    log_line('logs/generate_article_drafts.log', f'mode={'mock' if args.mock else 'real'} dry_run={args.dry_run} max_drafts={args.max_drafts}')
+    mode = "mock" if args.mock else "real"
+    log_line("logs/generate_article_drafts.log", f"mode={mode} dry_run={args.dry_run} max_drafts={args.max_drafts}")
 
     malla = load_yaml(Path(args.malla))
     classified = load_json(Path(args.classification))

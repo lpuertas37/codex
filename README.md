@@ -79,3 +79,15 @@ Este modo:
 7. Ejecutar mock con sync real:
    - `python scripts/run_weekly_pipeline.py --mock`
 8. Verificar no duplicados re-ejecutando el comando anterior y revisando `outputs/notion/notion_sync_report.md` (debe subir "actualizados", no "creados" para los mismos registros).
+
+
+## Crear bases automáticamente (Notion)
+Con `NOTION_TOKEN` y `NOTION_PARENT_PAGE_ID` configurados:
+
+```bash
+python scripts/create_notion_databases.py
+```
+
+El script crea (o reutiliza) las bases **Papers** y **Malla Editorial** sin duplicarlas, y genera `.env.generated` con:
+- `NOTION_PAPERS_DATABASE_ID`
+- `NOTION_MALLA_DATABASE_ID`

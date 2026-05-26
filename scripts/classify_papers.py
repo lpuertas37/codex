@@ -172,7 +172,8 @@ def main() -> None:
     parser.add_argument('--mock', action='store_true')
     parser.add_argument('--dry-run', action='store_true')
     args = parser.parse_args()
-    log_line('logs/classify_papers.log', f'mode={'mock' if args.mock else 'real'} dry_run={args.dry_run}')
+    mode = "mock" if args.mock else "real"
+    log_line("logs/classify_papers.log", f"mode={mode} dry_run={args.dry_run}")
 
     temas = load_malla(Path(args.malla))
     papers = load_papers(Path(args.papers))
